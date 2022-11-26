@@ -1,0 +1,13 @@
+@import "../Constants/Extends";
+@import "../Constants/Variables";
+@import "../Constants/Mixin";
+
+.reportTitle {
+  margin-top: 30px !important;
+  //border-bottom: $Border;
+  width: 98.5%;
+  padding-right: 20px !important;;
+  font-weight: 1000;
+  font-size: 30px;
+  color: #655377;
+}

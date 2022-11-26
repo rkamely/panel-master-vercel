@@ -1,0 +1,19 @@
+@import "../../Constants/Extends";
+@import "../../Constants/Variables";
+@import "../../Constants/Mixin";
+
+.box {
+  width: 100%;
+  margin: auto;
+
+  .miniBox {
+    @include Display(row, space-around, center) ;
+    width: 100%;
+    margin: 15px auto;
+    @media screen and (max-width: 1200px) {
+      justify-content: space-around;
+      flex-wrap: wrap;
+
+    }
+  }
+}

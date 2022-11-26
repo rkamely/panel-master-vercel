@@ -1,0 +1,24 @@
+@font-face {
+  font-family: "Abel";
+  src: local('Abel'), url('./Assets/Font/iransans.woff') format('truetype');
+}
+
+html {
+  height: auto;
+}
+
+.App {
+
+  * {
+    box-sizing: border-box;
+    text-decoration: none;
+    direction: rtl;
+    font-family: 'Abel';
+
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    padding: 0;
+    margin: 0;
+  }
+}

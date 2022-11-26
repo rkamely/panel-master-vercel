@@ -1,0 +1,97 @@
+@import "../../Constants/Extends";
+@import "../../Constants/Variables";
+@import "../../Constants/Mixin";
+
+
+.MiniBox {
+  @include Display(column, flex-start, space-around);
+  width: 20%;
+  padding: 20px;
+  border-radius: #{$BorderRadius};
+  height: 175px;
+  box-shadow: #{$BoxShadow};
+  position: relative;
+  overflow: hidden;
+  @media screen and (max-width: 1200px) {
+    width: 40%;
+    margin: 10px 15px;
+    height: 130px;
+    padding: 10px 20px;
+    @media screen and (max-width: 600px) {
+      width: 88%;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      height: 65px;
+      margin: 5px 15px;
+
+    }
+  }
+
+  > img {
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    right: -35%;
+    bottom: -40%;
+  }
+
+  .mainTitle {
+    @include Display(row, space-between, center);
+    margin-bottom: 10px;
+    @media screen and (max-width: 1200px) {
+      margin-bottom: 0;
+    }
+
+
+    p {
+      margin: 0;
+      font-size: 25px;
+      color: #ffffffbf;
+      @media screen and (max-width: 600px) {
+        width: 80px;
+
+      }
+    }
+
+    .icon {
+      @include Display(row, center, center);
+      font-size: 35px;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      align-self: flex-end;
+
+    }
+  }
+
+
+  .textMiniBox {
+    width: 100%;
+    @media screen and (max-width: 600px) {
+      width: auto;
+    }
+
+    span {
+      color: #ffffffbf !important;
+      font-size: 28px;
+      text-align: center;
+      font-weight: 500;
+      @media screen and (max-width: 600px) {
+        font-size: 20px;
+      }
+    }
+
+    h6 {
+      color: #ffffffbf;
+      font-size: 20px;
+      display: inline;
+      margin-right: 5px;
+      @media screen and (max-width: 600px) {
+        font-size: 15px;
+      }
+
+    }
+  }
+
+}

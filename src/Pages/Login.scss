@@ -1,0 +1,106 @@
+@import "../Constants/Extends";
+@import "../Constants/Variables";
+@import "../Constants/Mixin";
+
+.login {
+  width: 85%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: #{$BoxShadow};
+  height: calc(100vh - 60px);
+
+  padding: 10px;
+  margin: 30px auto;
+  border-radius: 10px;
+  @media screen and (max-width: 768px) {
+    height: calc(100vh - 150px);
+    margin: 100px auto;
+  }
+
+  > * {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 50%;
+    margin: auto;
+    @media screen and (max-width: 768px) {
+      width: 80%;
+    }
+  }
+
+  > div {
+    height: 100%;
+    border-radius: 10px 0 0 10px;
+    background-size: cover;
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+
+    > img {
+      width: 250px;
+      height: 250px;
+    }
+  }
+
+  > form {
+    height: 100%;
+
+    img {
+      display: none;
+      @media screen and (max-width: 768px) {
+        display: block;
+        width: 150px;
+        margin-bottom: 20px;
+      }
+
+    }
+
+    > h1 {
+      margin: 20px auto;
+      font-size: 50px;
+      font-weight: 1000;
+      width: 100%;
+      text-align: center;
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
+    }
+
+
+    > span {
+      display: flex;
+      align-items: center;
+      margin: 10px;
+      width: 60%;
+      gap: 10px;
+
+      > p {
+        margin: 0;
+      }
+
+      > input {
+
+      }
+    }
+
+    > button {
+      margin: 50px auto 0;
+      width: 150px;
+      height: 50px;
+      cursor: pointer;
+      border: none;
+      border-radius: #{$BorderRadius};
+      font-size: 22px;
+      background: linear-gradient(to right, #12b3eb, #5460f9);
+      color: #FFFFFF;
+      outline: none;
+
+      &:hover {
+        opacity: .9;
+      }
+    }
+  }
+}

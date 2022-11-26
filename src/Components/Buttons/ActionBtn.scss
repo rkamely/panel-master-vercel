@@ -1,0 +1,20 @@
+@import "../../Constants/Extends";
+@import "../../Constants/Variables";
+@import "../../Constants/Mixin";
+
+.primaryBtn {
+  width: 80px;
+  height: 30px;
+  padding: 3px;
+  border: none;
+  border-radius: #{$BorderRadius};
+  margin-right: 10px;
+  cursor: pointer;
+  background-color: #{$PrimaryBtn};
+  color: #FFFFFF;
+  transition: .2s;
+
+  &:hover {
+    opacity: .7;
+  }
+}

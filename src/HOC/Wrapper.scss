@@ -1,0 +1,17 @@
+@import "../Constants/Extends";
+@import "src/Constants/Variables";
+@import "src/Constants/Mixin";
+
+.MainPage {
+  width: 100%;
+  @include Display(row, flex-start, flex-start);
+  background-color: #{$MainBackground};
+  color: #{$FontMainColor};
+
+}
+.leftMain{
+  @include Display(column, center, center);
+  width: 100%;
+
+}
+

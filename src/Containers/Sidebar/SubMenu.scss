@@ -1,0 +1,40 @@
+@import "../../Constants/Mixin";
+@import "../../Constants/Variables";
+
+
+.menu {
+  background-color: #{$ElementsBackground};
+  border: none;
+
+  > * {
+    @include Display(row, flex-start, center);
+    color: black;
+
+  }
+
+  .titleMenu {
+
+    .textTitle {
+      margin: 0 10px;
+    }
+  }
+
+  .subMenu {
+    border: none;
+    color: #{$FontColor};
+
+
+    .menuItem {
+      padding-right: 20%;
+
+      a {
+        text-decoration: none;
+        color: #{$FontColor};
+        margin: 0 10px;
+        white-space: nowrap;
+      }
+
+    }
+  }
+
+}

@@ -1,0 +1,16 @@
+@import "src/Constants/Variables";
+@import "src/Constants/Mixin";
+
+.Footer {
+  height: 200px;
+  width: 100%;
+  margin-top: 30px;
+  border-radius: 50px 50px 0 0;
+  background-image: linear-gradient(to right, #2b5876, #4e4376);
+  @include Display(row, center, flex-end);
+  padding: 10px;
+
+  h3 {
+    color: #d5d5d5;
+  }
+}

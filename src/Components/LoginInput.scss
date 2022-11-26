@@ -1,0 +1,59 @@
+@import "../Constants/Extends";
+@import "../Constants/Variables";
+@import "../Constants/Mixin";
+
+
+.loginInput {
+  margin: 10px auto;
+  width: 60%;
+  height: 80px;
+  border-radius: #{$BorderRadius};
+  border: #{$Border};
+  transition: .1s;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  @media screen and (max-width: 992px) {
+    width: 80%;
+  }
+  @media screen and (max-width: 768px) {
+    width: 95%;
+  }
+  > span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right, #12b3eb, #5460f9);
+    height: 80px;
+    font-size: 35px;
+    border-radius: 0 #{$BorderRadius} #{$BorderRadius} 0;
+    transition: .15s;
+    color: #FFFFFF;
+  }
+
+
+  > input {
+    outline: none;
+    padding: 20px;
+    font-size: 20px;
+    border: none;
+    height: 75px;
+    width: 100%;
+    transition: .15s;
+    @media screen and (max-width: 992px) {
+      font-size: 16px;
+    }
+    &:focus {
+      width: 80%;
+    }
+  }
+}
+.showPassword{
+  margin: 0 20px;
+  font-size: 30px;
+  color: #858585;
+  cursor: pointer;
+  position: absolute;
+  left: 0;
+}

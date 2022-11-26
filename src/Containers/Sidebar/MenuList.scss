@@ -1,0 +1,62 @@
+@import "../../Constants/Mixin";
+@import "../../Constants/Variables";
+
+.iconHiddenMenuList {
+  @include Display(row, center, center);
+  margin: auto;
+  width: 40px;
+  height: 40px;
+  font-size: #{$SidebarMenuFontSize};
+}
+
+.iconHiddenMenuList:hover {
+  border: #{$Border};
+  border-radius: #{$BorderRadius};
+  cursor: pointer;
+}
+
+.MenuList {
+  .menu {
+    background-color: #{$ElementsBackground};
+    border: none;
+    padding: 0 10px;
+
+    > * {
+      @include Display(row, flex-start, center);
+      color: #{$FontColor};
+    }
+
+    .titleMenu {
+      background-color: #{$ElementsBackground};
+
+      .iconAndText {
+        @include Display(row, flex-start, center);
+
+        .textTitle {
+          margin: 0 10px;
+        }
+
+      }
+    }
+
+
+    .subMenu {
+      background-color: #{$ElementsBackground};
+      border: none;
+      color: #{$FontColor};
+      padding: 5px 0;
+
+      .menuItem {
+        padding-right: 20%;
+
+        a {
+          text-decoration: none;
+          color: #{$FontColor};
+
+        }
+
+      }
+    }
+
+  }
+}

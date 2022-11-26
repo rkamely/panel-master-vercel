@@ -1,0 +1,96 @@
+@import "src/Constants/Variables";
+@import "src/Constants/Mixin";
+
+.Header {
+  @include Display(row, space-between, center);
+  width: 95%;
+  background-color: #{$ElementsBackground};
+  padding: 15px 30px;
+  margin: 20px auto;
+  border-radius: #{$BorderRadius};
+  box-shadow: #{$BoxShadow};
+  border: #{$Border};
+  overflow: hidden;
+  height: 50px;
+  @media screen and (max-width: 768px) {
+    padding: 5px 15px;
+  }
+
+  > div {
+    @include Display(row, center, center);
+    color: #{$FontColor};
+    font-size: #{$MenuFontSize};
+    cursor: pointer;
+  }
+
+  .wrapper {
+    @include Display(row, center, center);
+    cursor: pointer;
+  }
+
+  .toggle-button, .button-open {
+    position: relative;
+    width: 35px;
+    height: 30px;
+    transition: .25s;
+    z-index: 15;
+    @media screen and (min-width: 768px) {
+      visibility: hidden;
+    }
+  }
+
+
+  .menu-bar {
+    position: absolute;
+    border-radius: 2px;
+    width: 80%;
+    transition: .5s;
+    height: 3px;
+    background-color: #{$FontColor};
+
+  }
+
+  .menu-bar-top {
+    border: 1px solid #{$FontColor};
+    //border-bottom: none;
+    top: 5px;
+
+  }
+
+  .menu-bar-middle {
+
+    top: 13px;
+  }
+
+  .menu-bar-bottom {
+    border: 1px solid #{$FontColor};
+    //border-top: none;
+    top: 21px;
+  }
+
+
+  .button-open .menu-bar-top {
+    transform: rotate(45deg) translate(7px, 2px);
+    transition: .5s;
+    cursor: pointer;
+
+  }
+
+  .button-open .menu-bar-middle {
+    transform: translate(230px);
+    transition: .1s ease-in;
+    opacity: 0;
+  }
+
+  .button-open .menu-bar-bottom {
+    transform: rotate(-45deg) translate(9px, -5px);
+    transition: .5s;
+  }
+
+  .leftSideIcons {
+    @include Display(row, center, center);
+    >* {
+      margin-right: 10px;
+    }
+  }
+}

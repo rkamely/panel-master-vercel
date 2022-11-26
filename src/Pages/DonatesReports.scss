@@ -1,0 +1,93 @@
+@import "../Constants/Extends";
+@import "../Constants/Variables";
+@import "../Constants/Mixin";
+
+.donatesReports {
+  @include Display(column, flex-start, flex-end);
+  width: 100%;
+
+  .donatesReportsGraphs {
+    @include Display(row, space-around, center);
+    padding: 20px 10px;
+    height: auto;
+    width: 97%;
+    margin: auto;
+    flex-wrap: wrap;
+
+    > * {
+      margin-top: 20px;
+    }
+
+    @media screen and (max-width: 1200px) {
+      @include Display(column-reverse, center, center);
+      width: 92%;
+
+    }
+
+    .typesSalesCharge {
+      width: 100%;
+    }
+    .amountOfTypes{
+      width: 100%;
+
+    }
+
+    .leftGraph {
+      @include Display(column, center, stretch);
+
+      background-color: #FFFFFF;
+      border-radius: #{$BorderRadius};
+      box-shadow: #{$BoxShadow};
+      padding: 10px;
+      border: #{$Border};
+      @media screen and (max-width: 1200px) {
+        width: 100%;
+        margin-bottom: 20px;
+        height: 400px;
+      }
+    }
+
+    .rightGraph {
+      @include Display(column, center, stretch);
+      border: #{$Border};
+      background-color: #FFFFFF;
+      border-radius: #{$BorderRadius};
+      box-shadow: #{$BoxShadow};
+      padding: 10px;
+      @media screen and (max-width: 1200px) {
+        width: 100%;
+        margin-bottom: 20px;
+        height: 400px;
+      }
+    }
+
+
+  }
+
+  .chartForm {
+    @include Display(row, flex-start, center);
+
+    > * {
+      margin-right: 5px;
+    }
+
+
+    .ant-picker-input > input::placeholder {
+      text-align: center;
+    }
+
+    input {
+      border-radius: #{$BorderRadius};
+    }
+
+    .ant-picker-date-panel {
+      font-family: 'Abel' !important;
+    }
+  }
+
+  .changeTypeData {
+    display: flex;
+    align-items: center;
+  }
+
+}
